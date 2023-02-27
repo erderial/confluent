@@ -72,6 +72,9 @@ import traceback
 import tempfile
 import uuid
 
+#calling the check_for_yaml function from auth.py to check if the custom authorization.yaml
+#file exists in /etc/confluent and changing roles accordingly if it exists.
+auth.check_for_yaml()
 
 def _daemonize():
     if not 'fork' in os.__dict__:
